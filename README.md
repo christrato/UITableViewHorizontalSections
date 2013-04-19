@@ -32,6 +32,12 @@ You have to pass an array like the one that you found inside the file "ViewContr
 that tells the "SectionScrollView" how and where create the "SectionsCellView".
 In this case the section "NAME" correspond for the first 6 rows, and the section "CITY" correspond for the next 5 rows.
 
+    [_sectionsScrollView loadSections:_arraySections];
+
+After loading the sections you have to call a method every time the didScroll event of the TableView is called:
+
+    [_sectionsScrollView sectionsScrollWithOffset:contentOffset];
+    
 
 EXAMPLE:
 
